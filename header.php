@@ -365,7 +365,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 	<header class="header menu_2">
 		<div id="preloader"><div data-loader="circle-side"></div></div><!-- /Preload -->
 		<div id="logo">
-			<a href="index.php"><img src="images/hicode-logo.png" width="149" height="60" data-retina="true" alt="" style="width:100%;"></a>
+			<a href="index.php"><img src="images/hicode-logo.png" width="300px" height="300px" data-retina="true" alt="" style="width:100%;"></a>
 		</div>
 		
 		<!-- /top_menu -->

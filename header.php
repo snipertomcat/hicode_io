@@ -384,14 +384,14 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 				<li><span><a href="courses-list.php">Online Course</a></span>
     				<ul>
     					<li><a href="fcourses-list.php">Fiverr Online Course</a></li>
-                        <li><a href="courses-list.php?searchkey=Graphics and Design">Graphics & Design</a></li>
-						<li><a href="courses-list.php?searchkey=Digital+Marketing">Digital Marketing</a></li>
-                        <li><a href="courses-list.php?searchkey=Writing+and+Translation">Writing & Translation</a></li>
-                        <li><a href="courses-list.php?searchkey=Affiliate+Marketing">Affiliate Marketing</a></li>
-                        <li><a href="courses-list.php?searchkey=Cryptocurrency">Cryptocurrency</a></li>           
-                        <li><a href="courses-list.php?searchkey=Leadership">Leadership</a></li>
-                        <li><a href="courses-list.php?searchkey=Programming">Programming</a></li>
-                        <li><a href="courses-list.php?searchkey=Weight+Loss">Weight Loss</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Graphics and Design">Graphics & Design</a></li>
+						<li><a href="fcourses-list.php?searchkey=Digital+Marketing">Digital Marketing</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Writing+and+Translation">Writing & Translation</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Affiliate+Marketing">Affiliate Marketing</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Cryptocurrency">Cryptocurrency</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Leadership">Leadership</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Programming">Programming</a></li>
+                        <li><a href="fcourses-list.php?searchkey=Weight+Loss">Weight Loss</a></li>
 					</ul>
     			</li>
     			<?php

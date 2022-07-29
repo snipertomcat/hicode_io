@@ -174,13 +174,11 @@ for ($i=0 ; $i < $count; $i++ ) {
                                 }
 									
 						        ?>
-                            <div><?php echo $str_jsonAry_decoded[$i]['title'];?></div>
-							<?php echo $str_jsonAry_decoded[$i]['price'];?></div>
 							<div class="preview"><span>Preview course</span></div>
 						</figure>
 						<div class="wrapper" style="height: 170px;">
 							<small><?php //echo $cat_type;?></small>							
-							<h3><?php echo $str_jsonAry_decoded[$i]['titles'];?> </h3>
+							<h3><?php echo $str_jsonAry_decoded[$i]['title'];?> </h3>
 							<p><?php echo substr($str_jsonAry_decoded[$i]['shortcontent'],0,150);?>..</p>
 							
 						</div>

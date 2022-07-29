@@ -376,6 +376,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 				</div>
 			</div>
 		</a>
+
 		<nav id="menu" class="main-menu">
 			<ul>
 				<li><span><a href="index.php">Home</a></span></li>

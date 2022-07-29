@@ -1,11 +1,12 @@
 <?php
 include('header.php');
+
 ?>
 
 <section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
-					<h3>What would you learn?</h3>
+					<h3>What would you like to learn?</h3>
 					<p>Increase your expertise in business, technology and personal development</p>
 					<form method="GET" action="fcourses-list.php">
 						<div id="custom-search-input">

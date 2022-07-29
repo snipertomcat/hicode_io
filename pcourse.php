@@ -2,7 +2,6 @@
 			<div class="main_title_2">
 				<span><em></em></span>
 				<h2>Fiverr Popular Courses</h2>
-				<!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
 			</div>
 			<div id="reccomended" class="owl-carousel owl-theme">
 				<?php 
@@ -45,7 +44,7 @@
 				<?php 
 					}
 				?>
-				
+				c
 			</div>
 			<!-- /carousel -->
 			<!-- <div class="container">

@@ -48,9 +48,10 @@ include('listing-filter.php');
 			<div class="row">
 
 <?php
-for ($i=0 ; $i < count($str_jsonAry_decoded); $i++ ) {   
 
-?>  
+$count = count($str_jsonAry_decoded);
+for ($i=0 ; $i < $count; $i++ ) {
+?>
 
 				<div class="col-xl-4 col-lg-6 col-md-6">
 					<div class="box_grid wow">
@@ -173,7 +174,8 @@ for ($i=0 ; $i < count($str_jsonAry_decoded); $i++ ) {
                                 }
 									
 						        ?>
-							<?php //echo $str_jsonAry_decoded[$i]['price'];?></div>
+                            <div><?php echo $str_jsonAry_decoded[$i]['title'];?></div>
+							<?php echo $str_jsonAry_decoded[$i]['price'];?></div>
 							<div class="preview"><span>Preview course</span></div>
 						</figure>
 						<div class="wrapper" style="height: 170px;">

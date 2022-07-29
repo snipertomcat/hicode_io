@@ -3,7 +3,7 @@ error_reporting(0);
 include('header.php');
 
 ?>
-	
+
 		<section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
@@ -24,7 +24,7 @@ include('header.php');
 		</section>
 		<!--/hero_in-->
 
-<?php		
+<?php
 include('listing-filter.php');
 ?>
 

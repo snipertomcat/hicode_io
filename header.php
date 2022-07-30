@@ -5,7 +5,7 @@ header("Access-Control-Allow-Headers: Content-type");
 
 ini_set('display_errors', 'off');
 ini_set('display_startup_errors', 'off');
-error_reporting(E_ALL);
+error_reporting(0);
 
 $protocol = isset($_SERVER["HTTPS"]) ? 'https://' : 'http://';
 $mainurl = $protocol.$_SERVER['HTTP_HOST'];
@@ -14,7 +14,7 @@ $mainurl = $protocol.$_SERVER['HTTP_HOST'];
 
 $base_url = $_SERVER['HTTP_HOST'];
 $domain = $base_url;
-
+//echo "<pre>"  . print_r($protocol) .print_r($mainurl). print_r($base_url) . print_r($domain);die;
 // $subdomain = explode(".",$base_url);
 
 // $domain = $subdomain[0];
@@ -85,6 +85,8 @@ curl_close($handle);
 
 $json = json_decode($output, true);
 
+//print_r($json);die;
+
 //print_r($json);exit();
 
 $quiz_id = $_GET['quiz_id'];
@@ -103,7 +105,7 @@ $json2 = json_decode($output2, true);
 $base_url = ( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on' ? 'https' : 'http' ) . '://' .  $_SERVER['HTTP_HOST'];
  $url = $base_url . $_SERVER["REQUEST_URI"];
 
-//print_r($json['ads']);
+//print_r($json);die;
 if($json['frontend']['fb_comment_code'] != '')
 {
     $fb_comment_code = $json['frontend']['fb_comment_code'];
@@ -133,9 +135,9 @@ for ($i=0 ; $i < count($json['ads']); $i++ )
             $homepagebanner = $json['ads'][$i]['ads_code'];
         }
         if($json['ads'][$i]['adtype'] == 'ads2')
-        {   
-            // $a = explode('https://app.sitecoursepro.com/images/bannerimages/',$json['ads'][$i]['bannerimg']);
-            // $img = '../app.sitecoursepro.com/images/bannerimages/'.$a[1];
+        {
+            //$a = explode('https://app.sitecoursepro.com/images/bannerimages/',$json['ads'][$i]['bannerimg']);
+            //$img = '../app.sitecoursepro.com/images/bannerimages/'.$a[1];
             
             //echo '<img src="'.$json['ads'][$i]['bannerimg'].'">';
             //$homepagebanner = '<a href="'.$json['ads'][$i]['bannerlink'].'" class="promo-image promo-overlay bg-image"  target="_blank"><img alt="" src="'.$json['ads'][$i]['bannerimg'].'"></a>';
@@ -295,7 +297,7 @@ for ($i=0 ; $i < count($json['ads']); $i++ )
 
 
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-//echo $url ;
+//echo $url ;die;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -384,18 +386,18 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 				<li><span><a href="courses-list.php">Online Course</a></span>
     				<ul>
     					<li><a href="fcourses-list.php">Fiverr Online Course</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Graphics and Design">Graphics & Design</a></li>
-						<li><a href="fcourses-list.php?searchkey=Digital+Marketing">Digital Marketing</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Writing+and+Translation">Writing & Translation</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Affiliate+Marketing">Affiliate Marketing</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Cryptocurrency">Cryptocurrency</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Leadership">Leadership</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Programming">Programming</a></li>
-                        <li><a href="fcourses-list.php?searchkey=Weight+Loss">Weight Loss</a></li>
+                        <li><a href="courses-list.php?searchkey=Graphics and Design">Graphics & Design</a></li>
+						<li><a href="courses-list.php?searchkey=Digital+Marketing">Digital Marketing</a></li>
+                        <li><a href="courses-list.php?searchkey=Writing+and+Translation">Writing & Translation</a></li>
+                        <li><a href="courses-list.php?searchkey=Affiliate+Marketing">Affiliate Marketing</a></li>
+                        <li><a href="courses-list.php?searchkey=Cryptocurrency">Cryptocurrency</a></li>
+                        <li><a href="courses-list.php?searchkey=Leadership">Leadership</a></li>
+                        <li><a href="courses-list.php?searchkey=Programming">Programming</a></li>
+                        <li><a href="courses-list.php?searchkey=Weight+Loss">Weight Loss</a></li>
 					</ul>
     			</li>
     			<?php
-                 if($json['affsetting']['clbusername'] != '') {                                                    
+
                 ?>
 				<li><span><a href="ccourses-list.php">Hot Digital Products</a></span>
     				<ul>
@@ -411,7 +413,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 					</ul>
     			</li>
     			<li><span><a href="fgcourses-list.php">Best Gig Jobs</a></span></li>
-                <?php } ?>
+                <?php  ?>
 				<li><span><a href="#">Pages</a></span>
 					<ul>
 						<?php

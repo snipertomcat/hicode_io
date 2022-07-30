@@ -8,10 +8,10 @@ include('header.php');
 				<div class="container">
 					<h3>What would you like to learn?</h3>
 					<p>Increase your expertise in business, technology and personal development</p>
-					<form method="GET" action="fcourses-list.php">
+					<form method="GET" action="courses-list.php">
 						<div id="custom-search-input">
 							<div class="input-group">
-								<input type="text" name="fskyd" class="search-query" placeholder="Ex. Architecture">
+								<input type="text" name="searchkey" class="search-query" placeholder="Ex. Architecture">
 								<input type="submit" class="btn_search" value="Search">
 							</div>
 						</div>

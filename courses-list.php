@@ -92,7 +92,7 @@ $ch =   curl_init();
 
 <?php
 foreach($json['results'] as $results) {
-
+print_r($results);die;
 ?>  
 
 				<div class="col-xl-4 col-lg-6 col-md-6">

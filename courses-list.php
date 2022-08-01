@@ -43,7 +43,7 @@ else{
 
 //echo $currencyid;
 $currencyid = $json['affsetting']['currency'];
-echo "<pre>"; print_r($json);
+//echo "<pre>"; print_r($json);
 if($_GET['page']){
     $url = "https://www.udemy.com/api-2.0/courses/?search=".$cat_type."&page=".$_GET['page']."&page_size=10";
 }
@@ -80,7 +80,7 @@ else{
 	    $json = json_decode($result, true);
 
 	    echo "<pre />";
-	    print_r($json);
+	    //print_r($json);
 ?>
 
 

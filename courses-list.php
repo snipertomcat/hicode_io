@@ -43,7 +43,7 @@ else{
 
 //echo $currencyid;
 $currencyid = $json['affsetting']['currency'];
-
+echo "<pre>"; print_r($json);
 if($_GET['page']){
     $url = "https://www.udemy.com/api-2.0/courses/?search=".$cat_type."&page=".$_GET['page']."&page_size=10";
 }
@@ -52,7 +52,7 @@ else{
 }
 
 
-$ch =   curl_init();
+        $ch =   curl_init();
 	    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	    curl_setopt($ch, CURLOPT_URL,$url);
@@ -61,7 +61,6 @@ $ch =   curl_init();
         {
         	$clientID = $json['affsetting']['udy_client_id'];
 	    	$clientSecret = $json['affsetting']['udy_secret_id'];
-        
         }
 		else
         {
@@ -217,7 +216,7 @@ foreach($json['results'] as $results) {
 		<!-- /container -->
 <?php		
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Content-type");
+//header("Access-Control-Allow-Headers: Content-type");
 
 ini_set('display_errors', 'off');
 ini_set('display_startup_errors', 'off');
@@ -283,11 +282,12 @@ $url = "https://app.sitecoursepro.com/site/homepage1.php";
 curl_setopt($handle, CURLOPT_URL, $url);
 curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($handle, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false );
+curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, true );
 curl_setopt($handle, CURLOPT_POSTFIELDS, 'domain_name='.$domain.'&cat_id='.$cat__id.'&sname='.$sname.'&spage='.$spage.'&cpage='.$cpage.'&bpage='.$bpage.'&skyword='.$skyd2.'&skypage='.$skypage.'&fcat='.$fcat.'');
 $output = curl_exec($handle);
 curl_close($handle);
 
 $json = json_decode($output, true);
+
 include('footer.php');
 ?>

@@ -12,7 +12,7 @@ include('header.php');
 						<div id="custom-search-input">
 							<div class="input-group">
 								<input type="text" name="searchkey" class="search-query" placeholder="Ex. Architecture">
-								<input type="submit" class="btn_search" value="Search">
+								<iwnput type="submit" class="btn_search" value="Search">
 							</div>
 						</div>
 					</form>

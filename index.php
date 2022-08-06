@@ -3,26 +3,11 @@ include('header.php');
 
 ?>
 
-<section class="hero_single version_2">
-			<div class="wrapper">
-				<div class="container">
-					<h3>What would you like to learn?</h3>
-					<p>Increase your expertise in business, technology and personal development</p>
-					<form method="GET" action="courses-list.php">
-						<div id="custom-search-input">
-							<div class="input-group">
-								<input type="text" name="searchkey" class="search-query" placeholder="Ex. Architecture">
-								<iwnput type="submit" class="btn_search" value="Search">
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</section>
+
 		<!-- /hero_single -->
 
 		<div class="features clearfix">
-			<div class="container">
+			<div class="container" style="margin-top: 100px">
 				<ul>
 					<li><i class="pe-7s-study"></i>
 						<h4>185,000+ courses</h4><span>Explore a variety of fresh topics</span>
@@ -40,10 +25,10 @@ include('header.php');
 
 		
 <?php
-// pouplar courses
-include('pcourse.php');
 // category listing
 include('category.php');
+// pouplar courses
+include('pcourse.php');
 // News and event
 include('news.php');
 // advertiement
@@ -79,12 +64,12 @@ include('footer.php');
                                     <div class="form-group">
                                         
                                         <input name="email" type="email" class="form-control input-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email here">
-                                        
+
                                     </div>
                                     <input type="hidden" name="webid" value="<?php echo $json['frontend']['id'];?>">
                                     <input type="hidden" name="uid" value="<?php echo $json['frontend']['uid'];?>">
-                                    
-                                                                 
+
+
                                 
                             </div>
                             <div class="col-sm-12 col-sm-offset-6 col-xs-6 col-xs-offset-6">

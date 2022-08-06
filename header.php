@@ -367,7 +367,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 	<header class="header menu_2">
 		<div id="preloader"><div data-loader="circle-side"></div></div><!-- /Preload -->
 		<div id="logo">
-			<a href="index.php"><img src="images/hicode-logo.png" width="150px" height="150px" data-retina="true" alt="" style="width:100%;"></a>
+			<a href="index.php"><img src="images/hicode-logo.png" width="150px" height="150px" data-retina="true" alt=""></a>
 		</div>
 		
 		<!-- /top_menu -->
@@ -386,14 +386,14 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 				<li><span><a href="courses-list.php">Online Course</a></span>
     				<ul>
     					<li><a href="fcourses-list.php">Fiverr Online Course</a></li>
-                        <li><a href="courses-list.php?searchkey=Graphics and Design">Graphics & Design</a></li>
-						<li><a href="courses-list.php?searchkey=Digital+Marketing">Digital Marketing</a></li>
-                        <li><a href="courses-list.php?searchkey=Writing+and+Translation">Writing & Translation</a></li>
-                        <li><a href="courses-list.php?searchkey=Affiliate+Marketing">Affiliate Marketing</a></li>
-                        <li><a href="courses-list.php?searchkey=Cryptocurrency">Cryptocurrency</a></li>
-                        <li><a href="courses-list.php?searchkey=Leadership">Leadership</a></li>
-                        <li><a href="courses-list.php?searchkey=Programming">Programming</a></li>
-                        <li><a href="courses-list.php?searchkey=Weight+Loss">Weight Loss</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Graphics and Design">Graphics & Design</a></li>
+						<li><a href="fcourses-list.php?fskyd=Digital+Marketing">Digital Marketing</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Writing+and+Translation">Writing & Translation</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Affiliate+Marketing">Affiliate Marketing</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Cryptocurrency">Cryptocurrency</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Leadership">Leadership</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Programming">Programming</a></li>
+                        <li><a href="fcourses-list.php?fskyd=Weight+Loss">Weight Loss</a></li>
 					</ul>
     			</li>
     			<?php

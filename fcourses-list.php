@@ -13,17 +13,9 @@ $searchword= $json['fsearchword'];
 		<section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
-					<h3>Fiverr Course</h3>
+					<h3>Fiverr Courses</h3>
 					<p>Increase your expertise in Software, Personal Development and Affiliate Marketing Courses </p>
-					<form method="GET" action="fcourses-list.php">
-						<div id="custom-search-input">
-							<div class="input-group">
-								<input type="text" name="fskyd" class=" search-query" placeholder="Ex. Affiliate Marketing" value="<?php echo $searchword;?>">
-								<input type="submit" class="btn_search" value="Search">
-							</div>
-						</div>
-					</form><br>
-					<span><b>Note :-</b> Only Limited Courses/Gigs/Digital Products Shown On This Page. <br>Kindly Use Our Smart Search Box To Find Any Items You Want</span>
+
 				</div>
 			</div>
 		</section>

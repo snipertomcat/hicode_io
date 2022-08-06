@@ -16,7 +16,7 @@ $clickbank = 'https://accounts.clickbank.com/mkplSearchResult.htm?includeKeyword
         curl_setopt ( $ch, CURLOPT_REFERER, 'http://www.bing.com/' );
         curl_setopt ( $ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36' );
         // curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.8');
-        
+
         curl_setopt ( $ch, CURLOPT_MAXREDIRS, 20 ); // Good leeway for redirections.
         @curl_setopt ( $ch, CURLOPT_FOLLOWLOCATION, 1 );
 

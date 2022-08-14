@@ -16,14 +16,14 @@ curl_setopt($handle3, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($handle3, CURLOPT_SSL_VERIFYPEER, false );
 curl_setopt($handle3, CURLOPT_POSTFIELDS, 'id='.$post_id.'');
 $output3 = curl_exec($handle3);
-print_r($output3);die;
+//print_r($output3);die;
 curl_close($handle3);
 
 $json3 = json_decode($output3, true);
 
 
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-print_r($actual_link);die;
+//print_r($actual_link);die;
 // Random 
 //$str_jsonAry_decoded_rand = $json['total_postlist3'];
 

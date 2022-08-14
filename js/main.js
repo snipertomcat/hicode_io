@@ -40,7 +40,7 @@
 		navbar: {
 			title: 'MENU'
 		},
-		navbars: [{position:'bottom',content: ['<a href="#0">© 2017 Udema</a>']}]}, 
+		navbars: [{position:'bottom',content: ['<a href="#0">© 2022 Udema</a>']}]},
 		{
 		// configuration
 		clone: true,

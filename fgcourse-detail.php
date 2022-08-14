@@ -3,7 +3,7 @@ include('header.php');
 
 
 
-$fiverr = $json['affsetting']['fiverrid'];
+$fiverr =  487042;
 
 $post_id = $_GET['id'];
 $handle3 = curl_init();

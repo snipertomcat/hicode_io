@@ -9,7 +9,6 @@ $fiverr = 487042;
 $handle3 = curl_init();
 $url = "https://app.sitecoursepro.com/site/fullfiverr.php";
 */
-$url =
 curl_setopt($handle3, CURLOPT_URL, $url);
 curl_setopt($handle3, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($handle3, CURLOPT_CUSTOMREQUEST, 'POST');

@@ -79,7 +79,7 @@ else{
 
 	    $json = json_decode($result, true);
 
-	    echo "<pre />";
+        //echo "<pre />";
 	    //print_r($json);
 ?>
 

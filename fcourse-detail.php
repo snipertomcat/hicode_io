@@ -5,10 +5,10 @@ $fiverr = 487042;
 
 
 
-/*$post_id = $_GET['id'];
+$post_id = $_GET['id'];
 $handle3 = curl_init();
 $url = "https://app.sitecoursepro.com/site/fullfiverr.php";
-*/
+
 curl_setopt($handle3, CURLOPT_URL, $url);
 curl_setopt($handle3, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($handle3, CURLOPT_CUSTOMREQUEST, 'POST');

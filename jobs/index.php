@@ -1,6 +1,8 @@
 <?php 
 require_once('admin/config.php');
-require_once('includes/url_slug.php'); 
+require_once('includes/url_slug.php');
+include 'admin/class.php';
+
 
 ?>
 <!DOCTYPE html>

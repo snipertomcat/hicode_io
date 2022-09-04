@@ -13,7 +13,7 @@ $searchword= $json['fsearchword'];
 		<section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
-					<h3>Fiverr Courses</h3>
+                    <h3><a href="https://go.fiverr.com/visit/?bta=487042&brand=fiverrcpa">Fiverr Courses</a></h3>
 					<p>Increase your expertise in Software, Personal Development and Affiliate Marketing Courses </p>
 
 				</div>

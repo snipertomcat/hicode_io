@@ -1,0 +1,21 @@
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+
+#www to non www redirect
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#non www to www redirect
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule ^jobs(.*)?$ search_main.php
+
+RewriteRule ^features?$ features_main.php
+RewriteRule ^about?$ about_main.php
+RewriteRule ^privacy-policy?$ privacy_main.php
+RewriteRule ^contact?$ contact_main.php
+
+
+

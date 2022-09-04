@@ -1,0 +1,81 @@
+/*
+Script Name: JobFinder
+Description: Job Search Engine Affiliate Script.
+Version: 1.4 
+Author: armorthemes.com                       
+*******************************************************************************************
+*******************************************************************************************                                                                                                           
+      ___    ______    _______    _______  __    _____  ___   ________    _______   _______   
+     |"  |  /    " \  |   _  "\  /"     "||" \  (\"   \|"  \ |"      "\  /"     "| /"      \  
+     ||  | // ____  \ (. |_)  :)(: ______)||  | |.\\   \    |(.  ___  :)(: ______)|:        | 
+     |:  |/  /    ) :)|:     \/  \/    |  |:  | |: \.   \\  ||: \   ) || \/    |  |_____/   ) 
+  ___|  /(: (____/ // (|  _  \\  // ___)  |.  | |.  \    \. |(| (___\ || // ___)_  //      /  
+ /  :|_/ )\        /  |: |_)  :)(:  (     /\  |\|    \    \ ||:       :)(:      "||:  __   \  
+(_______/  \"_____/   (_______/  \__/    (__\_|_)\___|\____\)(________/  \_______)|__|  \___) 
+
+*******************************************************************************************
+*******************************************************************************************								
+*/
+/* Main */
+@media (min-width: 768px) {
+.container {max-width: 760px;}
+}
+.navbar {
+    border-radius: 0px;
+}
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+@media (max-width: 992px) {
+.bootstrap-select {margin-bottom: 10px;}
+}
+p {white-space: pre-wrap;}
+/* Search */
+.search-container {
+padding: 70px 0px;
+background-repeat: no-repeat;
+background-image: url("images/searchback.jpg");
+background-size: cover;
+background-position: center center;
+}
+@media (max-width: 392px) {
+.job-search, .loc-search, .but-search {
+    -webkit-box-flex: 0;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+.but-search > .btn {
+width: 100%;
+}
+}
+/* Back to top button */
+#back-top {
+	position: fixed;
+	bottom: 10px;
+	right: 15px;
+	z-index: 1;
+}
+#back-top a {
+	display: block;
+	text-align: center;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	transition: 0.2s;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+}
+#back-top i {
+color: #fff;
+margin-top: 14px;	
+}
+/* Footer */
+@media (max-width: 392px) {
+.float-left, .float-right {
+text-align: center;
+float: none !important;
+}
+}

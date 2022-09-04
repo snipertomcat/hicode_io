@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php-webdriver/webdriver": "^1.12",
+        "guzzle/guzzle": "^3.9"
+    }
+}

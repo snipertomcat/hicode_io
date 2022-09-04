@@ -1,0 +1,322 @@
+{
+    "operations": [
+      {
+        "label": "ping",
+        "condition": "{{ _ping }}",
+        "request_config": {
+          "urls": [
+            {
+              "method": "POST",
+              "url": "https://fortegra.leadportal.com/apiJSON.php"
+            }
+          ],
+          "data_mapping": {
+            "fields": [
+              {
+                "to": "Request/Format",
+                "default": "JSON"
+              },
+              {
+                "from": "_settings.test",
+                "to": "Request/Test_Lead"
+              },
+              {
+                "from": "_settings.api_key",
+                "to": "Request/Key"
+              },
+              {
+                "to": "Request/API_Action",
+                "default": "pingPostLead"
+              },
+              {
+                "to": "Request/Mode",
+                "default": "ping"
+              },
+              {
+                "from": "_settings.source",
+                "to": "Request/SRC"
+              },
+              {
+                "to": "Request/Return_Best_Price",
+                "default": "1"
+              },
+              {
+                "to": "Request/TYPE",
+                "default": "19"
+              },
+              {
+                "from": "trusted_form_certificate_id",
+                "expression": "{% if _value %}https://cert.trustedform.com/{{_value}}{% endif %}",
+                "to": "Request/Trusted_Form"
+              },
+              {
+                "from": "state",
+                "to": "Request/State"
+              },
+              {
+                "from": "zipcode",
+                "to": "Request/Zip"
+              },
+              {
+                "from": "income",
+                "to": "Request/Household_Income"
+              },
+              {
+                "from": "household_size",
+                "to": "Request/Household_People"
+              },
+              {
+                "expression": "{{ date_of_birth | age }}",
+                "to": "Request/Age"
+              },
+              {
+                "from": "pregnant",
+                "expression": "{% if _value %}Yes{% else %}No{% endif %}",
+                "to": "Request/Pregnant"
+              },
+              {
+                "from": "preexisting_conditions",
+                "expression": "{% if _value %}Yes{% else %}No{% endif %}",
+                "to": "Request/Health_Conditions"
+              }
+            ]
+          },
+          "format": "json"
+        },
+        "response_config": {
+          "data_mapping": {
+            "fields": [
+              {
+                "from": "response.status",
+                "to": "data/status"
+              },
+              {
+                "expression": "{{ data.status == \"Matched\" }}",
+                "to": "accepted",
+                "type": "bool"
+              },
+              {
+                "from": "response.lead_id",
+                "to": "data/fortegra_lead_id"
+              },
+              {
+                "from": "response.price",
+                "to": "bids/0/bid",
+                "type": "float"
+              },
+              {
+                "to": "bids/0/broker_name",
+                "default": "Fortegra"
+              },
+              {
+                "to": "bids/0/buyer_name",
+                "default": "Fortegra"
+              },
+              {
+                "from": "response.status",
+                "to": "reject_category",
+                "value_map": [
+                  {
+                    "from": "Unmatched",
+                    "to": "no match"
+                  },
+                  {
+                    "from": "Error",
+                    "to": "invalid"
+                  }
+                ]
+              },
+              {
+                "from": "response.error",
+                "to": "reject_details"
+              },
+              {
+                "to": "requires_post",
+                "default": true
+              }
+            ]
+          },
+          "success_expression": "{{ accepted }}"
+        }
+      },
+      {
+        "label": "post",
+        "condition": "{{ _post }}",
+        "request_config": {
+          "urls": [
+            {
+              "method": "POST",
+              "url": "https://fortegra.leadportal.com/apiJSON.php"
+            }
+          ],
+          "data_mapping": {
+            "fields": [
+              {
+                "to": "Request/Format",
+                "default": "JSON"
+              },
+              {
+                "from": "_settings.test",
+                "to": "Request/Test_Lead"
+              },
+              {
+                "from": "_settings.api_key",
+                "to": "Request/Key"
+              },
+              {
+                "to": "Request/API_Action",
+                "default": "pingPostLead"
+              },
+              {
+                "to": "Request/Mode",
+                "default": "post"
+              },
+              {
+                "from": "fortegra_lead_id",
+                "to": "Request/Lead_ID"
+              },
+              {
+                "from": "_settings.source",
+                "to": "Request/SRC"
+              },
+              {
+                "to": "Request/TYPE",
+                "default": "19"
+              },
+              {
+                "from": "trusted_form_certificate_id",
+                "expression": "{% if _value %}https://cert.trustedform.com/{{_value}}{% endif %}",
+                "to": "Request/Trusted_Form"
+              },
+              {
+                "from": "state",
+                "to": "Request/State"
+              },
+              {
+                "from": "zipcode",
+                "to": "Request/Zip"
+              },
+              {
+                "from": "income",
+                "to": "Request/Household_Income"
+              },
+              {
+                "from": "household_size",
+                "to": "Request/Household_People"
+              },
+              {
+                "expression": "{{ date_of_birth | age }}",
+                "to": "Request/Age"
+              },
+              {
+                "from": "pregnant",
+                "expression": "{% if _value %}Yes{% else %}No{% endif %}",
+                "to": "Request/Pregnant"
+              },
+              {
+                "from": "preexisting_conditions",
+                "expression": "{% if _value %}Yes{% else %}No{% endif %}",
+                "to": "Request/Health_Conditions"
+              },
+              {
+                "from": "ip_address",
+                "to": "Request/IP_Address"
+              },
+              {
+                "from": "source_url",
+                "to": "Request/Landing_Page"
+              },
+              {
+                "from": "sub_1",
+                "to": "Request/Sub_ID"
+              },
+              {
+                "from": "first_name",
+                "to": "Request/First_Name"
+              },
+              {
+                "from": "last_name",
+                "to": "Request/Last_Name"
+              },
+              {
+                "from": "address",
+                "to": "Request/Address"
+              },
+              {
+                "from": "city",
+                "to": "Request/City"
+              },
+              {
+                "from": "state",
+                "to": "Request/State"
+              },
+              {
+                "from": "zipcode",
+                "to": "Request/Zip"
+              },
+              {
+                "from": "email",
+                "to": "Request/Email"
+              },
+              {
+                "expression": "{{ phone | last:10}}",
+                "to": "Request/Day_Phone"
+              },
+              {
+                "from": "date_of_birth",
+                "to": "Request/DOB"
+              },
+              {
+                "to": "Request/FPL",
+                "default": "FPL"
+              },
+              {
+                "from": "universal_lead_id",
+                "to": "Request/Universal_Lead_ID"
+              },
+              {
+                "from": "trusted_form_certificate_id",
+                "expression": "{% if _value %}https://cert.trustedform.com/{{_value}}{% endif %}",
+                "to": "Request/Trusted_Form_URL"
+              }
+            ]
+          },
+          "format": "json"
+        },
+        "response_config": {
+          "data_mapping": {
+            "fields": [
+              {
+                "from": "response.status",
+                "to": "data/status"
+              },
+              {
+                "expression": "{{ data.status == \"Matched\" }}",
+                "to": "accepted",
+                "type": "bool"
+              },
+              {
+                "from": "response.status",
+                "to": "reject_category",
+                "value_map": [
+                  {
+                    "from": "Unmatched",
+                    "to": "no match"
+                  },
+                  {
+                    "from": "Error",
+                    "to": "invalid"
+                  }
+                ]
+              },
+              {
+                "from": "response.error",
+                "to": "reject_details"
+              }
+            ]
+          },
+          "success_expression": "{{ accepted }}"
+        }
+      }
+    ]
+}

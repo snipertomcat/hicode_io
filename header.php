@@ -111,7 +111,7 @@ if($json['frontend']['fb_comment_code'] != '')
     $fb_comment_code = $json['frontend']['fb_comment_code'];
 }
 
-for ($i=0 ; $i < count($json['ads']); $i++ ) 
+for ($i=0 ; $i < count($json['ads']); $i++ )
 {
     if($json['ads'][$i]['ads_position'] == 'Next_to_Logo_Inside_Header')
     {
@@ -422,7 +422,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
                         <li><a href="ccourses-list.php?searchkey=Photography">Photography</a></li>
 					</ul>
     			</li>
-    			<li><span><a href="fgcourses-list.php">Best Gig Jobs</a></span></li>
+    			<li><span><a href="/jobs">Job Search</a></span></li>
                 <?php  ?>
 				<li><span><a href="#">Pages</a></span>
 					<ul>

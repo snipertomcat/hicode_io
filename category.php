@@ -1,7 +1,7 @@
 		<div class="container margin_30_95">
 			<div class="main_title_2">
 				<span><em></em></span>
-				<h2>Categories Courses</h2>
+				<h2>Course Categories</h2>
 				<!--<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
 			</div>
 			<div class="row">

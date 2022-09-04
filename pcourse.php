@@ -44,7 +44,6 @@
 				<?php 
 					}
 				?>
-				c
 			</div>
 			<!-- /carousel -->
 			<!-- <div class="container">

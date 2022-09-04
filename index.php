@@ -10,7 +10,7 @@ include('header.php');
 			<div class="container" style="margin-top: 100px">
 				<ul>
 					<li><i class="pe-7s-study"></i>
-						<h4>185,000+ courses</h4><span>Explore a variety of fresh topics</span>
+                        <h4><a href="https://go.fiverr.com/visit/?bta=487042&brand=fiverrcpa">185,000+ courses</a></h4><span>Explore a variety of fresh topics</span>
 					</li>
 					<li><i class="pe-7s-cup"></i>
 						<h4>Expert teachers</h4><span>Find the right instructor for you</span>

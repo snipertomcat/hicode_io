@@ -1,7 +1,7 @@
 <?php  
 			$username="admin"; 
 			$password="admin"; 
-			$site_url="http://localhost:9999"; 
+			$site_url="http://hicode.io";
 			$site_title="Hicode.io Job Search Site";
 			$youtube_key="6a9e295528bb200977a91069eebe68c2";
 			$zip_key="";

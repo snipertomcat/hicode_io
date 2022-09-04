@@ -422,7 +422,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
                         <li><a href="ccourses-list.php?searchkey=Photography">Photography</a></li>
 					</ul>
     			</li>
-    			<li><span><a href="/jobs">Job Search</a></span></li>
+    			<li><span><a href="./jobs">Job Search</a></span></li>
                 <?php  ?>
 				<li><span><a href="#">Pages</a></span>
 					<ul>

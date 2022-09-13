@@ -46,7 +46,7 @@ $result=curl_exec($ch);
 curl_close($ch);
 
 $json = json_decode($result, true);
-
+print_r($json);die;
 $title = $json['title'];
 $description = $json['description'];
 $image = $json['image_480x270'];

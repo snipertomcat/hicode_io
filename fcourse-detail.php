@@ -192,7 +192,7 @@ include('listing-filter.php');
                                 }
 				
 											        ?>
-                             <?php //echo $price;?>
+                             <?php echo '$' . $price;?>
 							</div>
 
 							 <!-- <ul class="list-unstyled">

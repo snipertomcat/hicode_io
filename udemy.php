@@ -1,27 +1,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <?php
-//include('header.php');
 
 ini_set('display_errors', 1);
-
-//$trackId = ;
-//$url = "https://www.udemy.com/api-2.0/courses/".$trackId."/?fields[course]=title,headline,description,image_480x270,rating,price,url,visible_instructors,created,avg_rating,is_paid,is_private,num_reviews,status_label,image_200_H";
-$url = 'https://www.udemy.com/api-2.0/courses?search=programming&price=price-free';
-
+//set options in url
+$searchTerm = "programming";
+$price = "price-free";
+//pull these values from variables passed in via __GET__
+$url = "https://www.udemy.com/api-2.0/courses?search=$searchTerm&price=$price";
+//setup curl call
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_URL,$url);
-
+//PUT YOUR CLIENT_ID AND CLIENT_SECRET HERE
 $clientID = 'ULLcEQDvs63nOWnFTW0uGKAGrrtlhDV4Hs9gDIQH';
 $clientSecret = '2f2tNHwzH3hn8ygDrtLhsGpg1fehrpAeIayLDnKn6L8PzARXBQ5ygsHimIPjfZpscXMQF12QIZxMtLcDw1Dtd5csQBYkOyx1w8nqvr5RDgzSe8C63PnKAMCFPcWMLpGe';
-
-//    $clientID = '1T69TiUXm5gEVciaGGZUrEkz9oSV6BOK33PTt952'; //$json['affsetting']['udy_client_id'];
-//    $clientSecret = '2F3uFtJE7olM3hHnXSpx0n3TOqKDzLUQJODTgUeB6vmSiAKDLOJTVXFkWZaVSMxIVAv5U8sToaWBSyIso0MGN1NH8nCDRWdzeSbTNEm6qVP4FbyCyGkrfiQS4eXEywDa'; //$json['affsetting']['udy_secret_id'];
-
-// $clientID = '1T69TiUXm5gEVciaGGZUrEkz9oSV6BOK33PTt952'; //$json['affsetting']['udy_client_id'];
-// $clientSecret = '2F3uFtJE7olM3hHnXSpx0n3TOqKDzLUQJODTgUeB6vmSiAKDLOJTVXFkWZaVSMxIVAv5U8sToaWBSyIso0MGN1NH8nCDRWdzeSbTNEm6qVP4FbyCyGkrfiQS4eXEywDa'; //$json['affsetting']['udy_secret_id'];
+//OR PULL THEM FROM THE SITECOURSEPRO settings:
 // $clientID = $json['affsetting']['udy_client_id'];
 // $clientSecret = $json['affsetting']['udy_secret_id'];
 
@@ -33,8 +28,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLINFO_HEADER_OUT, true);
 $result=curl_exec($ch);
 $results = json_decode($result);
-//echo "<pre>". print_r($results);die;
-
+echo "<pre>". print_r($results);
+//from here, iterate through $results and display them in any style you want
 ?>
 <?php foreach ($results->results as $item) { ?>
     <div class="card" style="width: 18rem;">
